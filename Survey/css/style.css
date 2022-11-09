@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+html {
+    font-size: 10px;
+    font-family: 'Archivo', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.5rem;
+    background: var(--color-darkblue);
+    background-image: linear-gradient(
+        60deg,
+        rgba(255, 72, 209, 0.8),
+        rgba(0, 0, 255, 0.7)
+        ),
+        /*url(https://repository-images.githubusercontent.com/185094183/ff64fd00-706f-11e9-9b53-d05acb2d0989);*/
+        url(https://lucapetersen.de/wp-content/uploads/2019/12/webdesigndesign-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color:white;
+
+    margin: 0;
+}
+#survey-form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0,0.7);
+    border-radius: 1rem;
+
+    padding: 1rem 7rem;
+    margin-bottom: 10rem;
+}
+
+#survey-form > .form-control {
+    display: flex;
+    flex-direction: column;
+
+    margin: 2.5rem 0;
+
+    align-items: center;
+}
+
+#header {
+    text-align: center;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    width: 50rem;
+}
+
+h1 {
+    margin-bottom: -1rem;
+}
+
+input, select, textarea, button {
+    font-family:inherit;
+    font-size: inherit;
+    border-radius: 0.5rem;
+    border:none;
+    padding:0.5rem;
+}
+
+.long-input {
+    box-sizing: border-box;
+    width: 50rem;
+}
+
+@media (max-width: 660px) {
+    html {
+        font-size: 8px;
+    }
+
+    #survey-form {
+        width: 100%;
+        padding: 0;
+
+        margin-bottom: 5rem;
+    }
+}
+
+#submit-btn {
+    border: none;
+    background-color: white;
+    color: gray;
+
+    padding: 1rem;
+}
+
+#submit:hover {
+    color: black;
+}

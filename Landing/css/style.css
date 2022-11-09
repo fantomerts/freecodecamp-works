@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+html {
+    font-size: 10px;
+    font-family: 'Archivo', sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    font-size: 2rem;
+    background-color: #161d2e;
+
+    margin: 0;
+    padding: 0;
+}
+
+#header-img {
+    width: 10rem;
+    transform: skewY(170deg);
+}
+
+#header-img:hover {
+    animation-name: spinning;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes spinning {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#logo-text {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2.3rem;
+    transform: skewY(170deg);
+
+    margin-top: 0.2rem;
+}
+
+#logo {
+    background-color: #00c0f0;
+    text-align: center;
+
+    margin-left: 20%;
+    padding: 2rem 1rem 16rem 1rem;
+    transform: translateY(-15px) skewY(-170deg);
+}
+
+#header {
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    position: fixed;
+    justify-content: space-between;
+    background-color: #b91e67;
+}
+
+#header > #nav-bar {
+    width: 30%;
+
+    margin-right: 10rem;
+}
+
+#header > #nav-bar > ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+#header > #nav-bar > ul > .nav-link {
+    padding: 0 0.5rem;
+}
+
+#header > #nav-bar > ul > .nav-link:hover {
+    animation-name: shadow;
+    animation-duration: 0.2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18rem;
+}
+
+#features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.feature-logo {
+    font-size: 8rem;
+    width: 9rem;
+    text-align:center;
+    color: #00c0f0;
+
+    padding-top: 3rem;
+}
+
+.feature-logo:hover {
+    animation-name: spinning;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.feature-text {
+    width: 27rem;
+    padding-left: 2rem;
+}
+
+.feature-text > p {
+    margin-top: -3.8rem;
+
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+a {
+    color: white !important;
+    text-decoration: none
+}
+
+#video-div {
+    text-align: center;
+
+    margin-top: 3rem;
+}
+
+#pricing {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    margin-top: 10rem;
+}
+
+#pricing > .option {
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 40rem;
+    height: 45rem;
+
+    margin: 0 1rem;
+}
+
+#pricing > .option > h4 {
+    font-size: 2.5rem;
+    color: white;
+    background-color: #b91e67;
+    padding: 2rem;
+
+    margin: 0;
+}
+
+#pricing > .option:hover  h4{
+    background-color: #00c0f0;
+    transition: background-color 1s;
+}
+
+#pricing > .option > p {
+    color: rgb(41, 41, 41);
+}
+
+#pricing > .option > .p-for-button-margin {
+    margin-bottom: 4.5rem;
+}
+
+.choose-button {
+    background-color: #b91e67;
+    border-radius: 0.5rem;
+
+    padding: 2rem 4rem;
+}
+
+.choose-button:hover {
+    background-color: #00c0f0;
+    transition: background-color 1s;
+}
+
+.anchors {
+    position: relative;
+    top:-10rem;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0,0.7);
+    border-radius: 1rem;
+    text-align: center;
+
+    padding: 1rem 8rem;
+    margin: 5rem 0;
+}
+
+#form > .form-control {
+    display: flex;
+    flex-direction: column;
+
+    margin: 2.5rem 0;
+
+    align-items: center;
+}
+
+#submit {
+    color: white;
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+input, select, textarea, button {
+    font-family:inherit;
+    font-size: inherit;
+    border-radius: 0.5rem;
+    border:none;
+    padding:0.5rem;
+    text-align: center;
+}
+
+#footer {
+    background-color: #b91e67;
+    text-align: end;
+    padding: 3rem 2rem 0 0;
+}
+
+@keyframes shadow {
+    from {
+        text-shadow: 0;
+    }
+    to {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+        text-shadow: 10px 10px 5px rgba(0, 0, 0, .4);
+    }
+}
+
+@media (max-width: 900px) {
+    #header > #nav-bar {
+        width: 80%;
+    
+        margin:0;
+    }
+
+    #logo {
+        margin-left: 2%;
+    }
+
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    #pricing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #pricing > .option {
+        margin: 1rem 0;
+    }
+    
+    iframe {
+        width: 400px;
+    }
+}
+
+@media (max-width: 550px) {
+    #header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #main {
+        margin-top: 16rem;
+    }
+
+    #logo {
+        transform: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #header-img {
+        width: 6rem;
+        transform: none;
+    }
+
+    #logo-text {
+        transform: none;
+        align-self: center;
+        
+        margin: 0;
+    }
+
+    #header > #nav-bar {
+        width: 100%;
+    }
+    #header > #nav-bar > ul {
+        flex-direction: column;
+        justify-content: none;
+    }
+
+    #header > #nav-bar > ul > .nav-link {
+        padding: 0.1rem 0;
+    }
+}
+
+@media (max-width: 400px) {
+    iframe {
+        width: 300px;
+    }
+    html {
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 300px) {
+    iframe {
+        width: 200px;
+    }
+    html {
+        font-size: 6px;
+    }
+}

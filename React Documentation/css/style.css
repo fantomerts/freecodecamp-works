@@ -1,0 +1,170 @@
+html {
+    font-size: 12px;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-family: 'Archivo', sans-serif;
+    color: #333366;
+    background-color: #f1f1ff;
+    margin: 10rem 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+#side-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 100%;
+    margin-right: 2rem;
+}
+
+#navbar {
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem 0.4rem rgb(128, 147, 153);
+
+    padding: 3rem 4rem;
+}
+
+#navbar > header > h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2.3rem;
+    margin: 0 0 3rem 0;
+}
+
+#navbar > section {
+    font-size: 1.8rem;
+    margin: 2rem 0;
+    transition: 0.2s ease;
+}
+
+#navbar > section:hover {
+    color: #ff5555;
+    transition: color 0.2s;
+}
+
+#main-doc {
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem 0.4rem rgb(128, 147, 153);
+    width: 70rem;
+
+    padding: 0 7rem 5rem 7rem;
+}
+
+#main-doc > .main-section > #section-header > h3 {
+    padding-top: 5rem;
+}
+
+#main-doc > .main-section > p,li {
+    line-height: 1.5;
+}
+
+xmp {
+    color: black;
+    background-color: #f8f8f8;
+    font-size: 1.2rem;
+    margin:0 0 0 2rem;
+    padding: 0.5rem 1rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 6rem;
+    height: 3.4rem;
+    margin-top: 2rem;
+}
+
+.switch input {
+    display:none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 2.6rem;
+    width: 2.6rem;
+    left: 0.4rem;
+    bottom: 0.4rem;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #225695;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 0.1rem #333366;
+}
+
+input:checked + .slider:before {
+    transform: translateX(2.6rem);
+}
+
+.slider.round {
+    border-radius: 3.4rem;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+@media (max-width: 1390px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 1160px) {
+    body {
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+    #navbar {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+
+        margin: 0;
+    }
+    .switch {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    #side-panel {
+        width: 100%;
+        flex-direction: column-reverse;
+        position: relative;
+        text-align: center;
+
+        margin: 0;
+    }
+    #main-doc {
+        align-self: center;
+        padding: 0 5%;
+        width: 90%;
+        margin: 0;
+    }
+}

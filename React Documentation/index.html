@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>React Documentation</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="js/script.js"></script>
+  <link rel="shortcut icon" href="https://hfy.pcgssyory.pw/img/71f7631349730f81e2d10429fb3f5a6c.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+</head>
+<body>
+    <nav id="side-panel">
+        <nav id="navbar">
+            <header id="nav-header"><h1>React Documentation</h1></header>
+            <section><a href="#Getting_started" class="nav-link">Getting started</a></section>
+            <section><a href="#Add_React_to_a_Website" class="nav-link">Add React to a Website</a></section>
+            <section><a href="#Create_a_New_React_App" class="nav-link">Create a New React App</a></section>
+            <section><a href="#CDN_Links" class="nav-link">CDN Links</a></section>
+            <section><a href="#Release_Channels" class="nav-link">Release Channels</a></section>
+        </nav>
+            <label class="switch">
+                <input type="checkbox" id="cb" onchange="changeColor(this)">
+                <span class="slider round"></span>
+            </label>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Getting_started">
+            <header id="section-header"><h3>Getting started</h3></header>
+            <p>React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. 
+                Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the 
+                links in this section will help you get started.</p>
+            <p>When starting a React project, a simple HTML page with script tags might still be the best option. It only takes a minute to set up!</p>
+            <p>As your application grows, you might want to consider a more integrated setup. There are several JavaScript toolchains we recommend for 
+                larger applications. Each of them can work with little to no configuration and lets you take full advantage of the rich React ecosystem.</p>
+            <p>People come to React from different backgrounds and with different learning styles. Whether you prefer a more theoretical or a practical approach, 
+                we hope you’ll find this section helpful.</p>
+            <ul>
+                <li>If you prefer to <strong>learn by doing</strong>, start with our practical tutorial.</li>
+                <li>If you prefer to <strong>learn concepts step by step</strong>, start with our guide to main concepts.</li>
+            </ul>
+            <p>Like any unfamiliar technology, React does have a learning curve. With practice and some patience, you <i>will</i> get the hang of it.</p>
+        </section>
+        <section class="main-section" id="Add_React_to_a_Website">
+            <header id="section-header"><h3>Add React to a Website</h3></header>
+            <p>React has been designed from the start for gradual adoption, and <strong>you can use as little or as much React as you need</strong>. 
+                Perhaps you only want to add some “sprinkles of interactivity” to an existing page. React components are a great way to do that.</p>
+            <p>First, open the HTML page you want to edit. Add an empty <i>div</i> tag to mark the spot where you want to display something with React. For example:</p>
+            <code>
+                <xmp><!-- ... existing HTML ... --></xmp>
+                <xmp><div id="like_button_container"></div></xmp>
+                <xmp><!-- ... existing HTML ... --></xmp>
+            </code><code></code><code></code><code></code>
+            <p>Before deploying your website to production, be mindful that unminified JavaScript can significantly slow down the page for your users. 
+                If you already minify the application scripts, your site will be production-ready if you ensure that the deployed HTML 
+                loads the versions of React ending in <i>production.min.js</i></p>
+            <p>Adding JSX to a project doesn’t require complicated tools like a bundler or a development server. Essentially, adding JSX 
+                <strong>is a lot like adding a CSS preprocessor</strong>. The only requirement is to have <i>Node.js</i> installed on your computer.</p>
+        </section>
+        <section class="main-section" id="Create_a_New_React_App">
+            <header id="section-header"><h3>Create a New React App</h3></header>
+            <p>Create React App is a comfortable environment for <strong>learning React</strong>, and is the best way to start building 
+                <strong>a new single-page application</strong> in React.</p>
+            <p>Create React App doesn’t handle backend logic or databases; it just creates a frontend build pipeline, so you can use it 
+                with any backend you want. Under the hood, it uses <i>Babel</i> and webpack, but you don’t need to know anything about them.</p>
+            <p>The following toolchains offer more flexibility and choice. We recommend them to more experienced users:</p>
+            <ul>
+                <li><strong>Neutrino</strong> combines the power of webpack with the simplicity of presets, and includes a preset for React apps and React components.</li>
+                <li><strong>Nx</strong> is a toolkit for full-stack monorepo development, with built-in support for React, Next.js, Express, and more.</li>
+                <li><strong>Parcel</strong> is a fast, zero configuration web application bundler that works with React.</li>
+                <li><strong>Razzle</strong> is a server-rendering framework that doesn’t require any configuration, but offers more flexibility than Next.js.</li>
+            </ul>
+        </section>
+        <section class="main-section" id="CDN_Links">
+            <header id="section-header"><h3>CDN Links</h3></header>
+            <p>The versions above are only meant for development, and are not suitable for production. Minified and optimized production versions of React are available at:</p>
+            <code>
+                <xmp><script crossorigin src=""></script></xmp>
+                <xmp><script crossorigin src=""></script></xmp>
+            </code>
+            <p>To load a specific version of <i>react</i> and <i>react-dom</i>, replace <i>17</i> with the version number.</p>
+        </section>
+        <section class="main-section" id="Release_Channels">
+            <header id="section-header"><h3>Release Channels</h3></header>
+            <p>React relies on a thriving open source community to file bug reports, open pull requests, and 
+                submit RFCs. To encourage feedback we sometimes share special builds of React that include unreleased features.</p>
+            <p>All releases are published to npm, but only Latest uses semantic versioning. Prereleases (those in the Next and Experimental 
+                channels) have versions generated from a hash of their contents and the commit date, e.g. <i>0.0.0-68053d940-20210623</i> for 
+                Next and <i>0.0.0-experimental-68053d940-20210623</i> for Experimental.</p>
+            <p>The only officially supported release channel for user-facing applications is Latest. Next and Experimental releases are provided
+                 for testing purposes only, and we provide no guarantees that behavior won’t change between releases. They do not follow the semver
+                  protocol that we use for releases from <i>Latest</i>.</p>
+            <p><strong>Latest</strong> is the channel used for stable React releases. It corresponds to the latest tag on npm. It is the recommended channel 
+                for all React apps that are shipped to real users.</p>
+            <p>The <strong>Next</strong> channel is a prerelease channel that tracks the main branch of the React repository. We use prereleases in the Next channel as release 
+                candidates for the Latest channel. You can think of Next as a superset of Latest that is updated more frequently.</p>
+            <p>Experimental features may or may not be documented. Usually, experiments aren’t documented until they are close to shipping in Next or Latest.</p>
+            <p>We will post to the <strong>React blog</strong> when we’re ready to announce new experiments, but that doesn’t mean we will publicize every experiment.</p>
+        </section>
+    </main>
+</body>
+</html>

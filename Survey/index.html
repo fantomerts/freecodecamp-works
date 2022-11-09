@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Simple Survey</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width">
+
+  <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <h1 id="title">Simple Survey Form</h1>
+        <p id="description">This survey will define your destiny</p>
+    </header>
+    <form id="survey-form" action="#" onsubmit='alert("Your answers is succesfully saved!");'>
+        <div class="form-control">
+            <label for="name" id="name-label">Name</label>
+            <input required type="text" id="name" placeholder="Enter your name" class="long-input">
+        </div>
+        <div class="form-control">
+            <label for="email" id="email-label">Email</label>
+            <input required type="email" id="email" placeholder="Enter your email" class="long-input">
+        </div>
+        <div class="form-control">
+            <label for="number" id="number-label">Age</label>
+            <input required type="number" id="number" placeholder="Enter your age" min="14" max="80" class="long-input">
+        </div>
+        <div class="form-control">
+            <label for="dropdown">Who is your favorite phone manufacturer?</label>
+            <select required id="dropdown" style="color:gray" onchange="this.style.color='black'" class="long-input">
+                <option value="" disabled selected>Choose your manufacturer</option>
+                <option value="samsung">Samsung</option>
+                <option value="apple">Apple</option>
+                <option value="sony">Sony</option>
+                <option value="google">Google</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label>Do you like cats?</label>
+            <label for="cats-1">
+                <input required type="radio" id="cats-1" name="cats" value="yes">Yes</input>
+            </label>
+            <label for="cats-2">
+                <input required type="radio" id="cats-2" name="cats" value="no">No</input>
+            </label>
+            <label for="cats-3">
+                <input required type="radio" id="cats-3" name="cats" value="maybe">Maybe</input>
+            </label>
+        </div>
+        <div class="form-control">
+            <label>Who is your favorite musicians?</label>
+            <label for="musician-1">
+                <input type="checkbox" id="musician-1" name="musicians" value="James Brown">James Brown</input>
+            </label>
+            <label for="musician-2">
+                <input type="checkbox" id="musician-2" name="musicians" value="Michael Jackson">Michael Jackson</input>
+            </label>
+            <label for="musician-3">
+                <input type="checkbox" id="musician-3" name="musicians" value="Christina Aguilera">Christina Aguilera</input>
+            </label>
+            <label for="musician-4">
+                <input type="checkbox" id="musician-4" name="musicians" value="Jay-Z">Jay-Z</input>
+            </label>
+            <label for="musician-5">
+                <input type="checkbox" id="musician-5" name="musicians" value="2Pac">2Pac</input>
+            </label>
+            <label for="musician-6">
+                <input type="checkbox" id="musician-6" name="musicians" value="Sting">Sting</input>
+            </label>
+        </div>
+        <div class="form-control">
+            <label for="comments" id="comments-label">Comments? (optional)</label>
+            <textarea id="comments" placeholder="Your comments" class="long-input"></textarea>
+        </div>
+        <div class="form-control">
+            <input type="submit" value="Submit" id="submit">
+        </div>
+    </form>
+</body>
+</html>
